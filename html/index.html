@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portafolio</title>
-        <link rel="stylesheet" href="/css/style.css">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="/css/style.css"> 
     </head>
-    <body>
+    <body>        
         <header>
-            <h1><a href="index.html" class="nav">Portafoli</a></h1>
-            <img src="/img/logo.png" alt="logo-itb" width="200px">
+            <h1><a href="index.html" class="nav">Portfolio</a></h1>
+            <img src="/img/logo.png" alt="Logo de ITB - Desenvolupament Web" width="200px">
             <nav>
                 <ul>
                     <li><a href="index.html" class="nav">Home</a></li>
@@ -18,34 +18,46 @@
                 </ul>
             </nav>
         </header>
+        
         <main>
             <section id="projectes-destacats">
-                <h2>Destacated projects</h2>
+                <h2>Destacated Projects</h2>
+                
                 <article class="projecte">
-                    <h3>Project 1: Disseny de Landing Page</h3>
-                    <p>Web dissenyada per a un client del sector tecnològic, amb focus en l'experiència d'usuari (UX).</p>
-                    <img src="img/projecte1_miniatura.jpg" alt="Miniatura del Projecte 1">
-                    <a href="project1.html" class="btn">Veure Detall Complet</a>
+                    <img src="img/projecte1_miniatura.jpg" alt="Project1">
+                    <div>
+                        <h3>Project 1: Train an AI</h3>
+                        <p>Inteligencia artificial entrenada per reconeixer ports de l'ordinador.</p>
+                        <a href="project1.html" class="btn">Veure Detall Complet</a>
+                    </div>
                 </article>
                 
                 <article class="projecte">
-                    <h3>Project 2: App de Gestió de Tasques</h3>
-                    <p>Desenvolupament d'una interfície moderna per a una aplicació de productivitat utilitzant les darreres tècniques de CSS.</p>
-                    <img src="img/projecte2_miniatura.jpg" alt="Miniatura del Projecte 2">
-                    <a href="project2.html" class="btn">Veure Detall Complet</a>
+                    <img src="img/projecte2_miniatura.jpg" alt="Project2">
+                    <div>
+                        <h3>Project 2: App de Gestió de Tasques</h3>
+                        <p>Desenvolupament d'una interfície moderna per a una aplicació de productivitat utilitzant les darreres tècniques de CSS.</p>
+                        <a href="project2.html" class="btn">Veure Detall Complet</a>
+                    </div>
                 </article>
             </section>
+            
             <aside>
-                <h4>Habilitats i Competències</h4>
+                <h4>About the grade</h4>
+                <p>What grade? Network Systems Administration Cybersecurity Profile (NSAC)</p>
+                <p>Where? Institut Tecnològic de Barcelona (ITB)</p>
+
                 <ul>
-                    <li>HTML Semàntic i Accessibilitat</li>
-                    <li>CSS Flexbox & Grid</li>
-                    <li>Javascript Bàsic</li>
-                    <li>Disseny Responsiv</li>
+                    <li>C/ Aiguablava, 121, 08033 Barcelona</li>
+                    <li>+34 937 070 020</li>
                 </ul>
-                <a href="CV_[El teu Nom].pdf" download class="btn-secundari">Descarregar CV</a>
+                
+                <div class="aside-buttons">
+                    <a href="https://itb.cat/portfolio/administracio-de-sistemes-i-xarxes-ciberseguretat/" target="_blank" class="btn-secundari">Web d'ASIXc</a>
+                    <a href="mailto:info@itb.cat" class="btn">Mail de contacto</a>
+                </div>
             </aside>
-        </main>
+        </main> 
         <footer>
             <p>&copy; 2025 Raúl & Aleix. Tots els drets reservats.</p>
             <div class="xarxes">
@@ -56,5 +68,6 @@
                 <a href="https://linkedin.com/in/[el_teu_usuari]" target="_blank">LinkedIn</a>
             </div>
         </footer>
+        <script src="/js/script.js" defer></script>
     </body>
 </html>

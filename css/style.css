@@ -21,10 +21,42 @@ body {
     line-height: 1.6;
     background-color: var(--color-background);
     color: var(--color-text);
+    
+    /* STICKY FOOTER: Contenidor Flexbox principal */
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    
+    position: relative; 
 }
 
 /* ==================================== */
-/* 2. Estructura General i Capçalera (Header, Main, Footer) */
+/* Fons Semitransparent (NOMÉS la imatge) */
+/* ==================================== */
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* CARREGUEM LA IMATGE */
+    background-image: url('../img/background.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    
+    /* APLIQUEM LA TRANSPARÈNCIA NOMÉS A AQUESTA CAPA */
+    opacity: 0.3; 
+    
+    /* Enviem aquesta capa al fons de tot */
+    z-index: -1; 
+}
+
+
+/* ==================================== */
+/* 2. Estructura General i Capçalera */
 /* ==================================== */
 
 header {
@@ -36,14 +68,15 @@ header {
     justify-content: space-between; 
 }
 
+/* Imatge del logo (posició esquerra) */
 header img {
     height: 40px; 
     width: auto;
-    margin-right: auto; /* Posiciona la imatge a l'esquerra */
+    margin-right: auto; 
 }
 
+/* Títol/Logo (posició centrada al header) */
 header h1 {
-    /* Centrat del títol al header sense divs */
     margin-left: auto;
     position: absolute;
     left: 50%;
@@ -63,19 +96,15 @@ header nav {
     z-index: 10;
 }
 
-/* ESTIL D'ESPAIAT SOL·LICITAT */
+/* Estil d'Espaiat per Títols */
 h2 {
-    /* Marge inferior per separar el títol del contingut següent */
     margin-bottom: 25px; 
     padding-bottom: 5px; 
     border-bottom: 1px solid #ddd;
 }
-/* Espaiat per subtítols */
 h3, h4 {
     margin-bottom: 15px;
 }
-/* Fi dels estils d'espaiat */
-
 
 /* MAIN: Maquetació de 2 Columnes (Section + Aside) amb Flexbox */
 main {
@@ -83,29 +112,43 @@ main {
     display: flex; 
     gap: 30px; 
     min-height: 70vh; 
+    flex-wrap: wrap; 
+    
+    flex-grow: 1; /* El main s'expandeix per empènyer el footer */
+    
+    /* [CLAU] Alinia el contingut a la part superior (dalt) */
+    align-items: flex-start;
 }
 
-/* Ajust per a les pàgines sense aside (Contacte i Llistat) */
+/* AJUST CLAU: Fa la Introducció ocupi el 100% de l'ample per anar a dalt (Mantingut per si la reintroduïu) */
+#introduccio {
+    width: 100%; 
+    max-width: 900px; 
+    margin: 0 auto 20px auto; 
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Ajust per a les pàgines sense aside */
 #formulari-contacte, #llistat-complet {
     width: 100%;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto; 
 }
 
-/* Secció de Projectes Destacats (3/4 de l'ample) */
+/* Secció de Projectes Destacats (2/3 de l'ample) */
 #projectes-destacats {
-    flex: 3; 
+    flex: 2; 
 }
 
-/* Estil dels Articles (Projectes) */
+/* Estil dels Articles (Projectes Destacats) */
 .projecte {
-    background-color: var(--color-light);
+    background-color: var(--color-light); 
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
-    /* Maquetació d'Imatge + Text un al costat de l'altre */
     display: flex;
     align-items: center; 
     gap: 30px; 
@@ -123,18 +166,53 @@ main {
     margin-bottom: 10px;
 }
 
-/* Aside: Barra lateral (1/4 de l'ample) */
+/* Aside: Barra lateral (1/3 de l'ample) */
 aside {
     flex: 1; 
     background-color: #e0f7fa; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    
+    /* FLEXBOX CLAU: Això fa que l'Aside s'expandeixi a l'alçada de Projectes Destacats */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Això centre els elements interns (text i botons) */
+    height: 100%; 
 }
 
+aside p {
+    margin-bottom: 20px; 
+}
+
+/* REGLA PER A L'ESPAIAT DE LA LLISTA (AUGMENTAT) */
 aside ul {
     list-style: none;
     margin-top: 10px;
+    padding: 0; 
+}
+
+aside ul li {
+    display: block; 
+    margin-bottom: 15px; 
+}
+
+aside ul li small {
+    display: inline-block;
+    min-width: 50px; 
+    font-weight: normal;
+}
+
+/* Contenidor dels botons de l'aside */
+.aside-buttons {
+    margin-top: 20px; 
+}
+
+aside .btn, aside .btn-secundari {
+    display: block;
+    width: 100%; 
+    margin-bottom: 10px;
+    margin-top: 0; 
 }
 
 footer {
@@ -168,6 +246,7 @@ nav ul a.nav {
     transition: background-color 0.3s;
 }
 
+/* Hover al menú de navegació */
 nav ul a.nav:hover {
     background-color: var(--color-secondary);
     color: var(--color-light);
@@ -199,7 +278,7 @@ nav ul a.nav:hover {
 }
 
 /* REQUISIT: Canvi d'aspecte en passar per sobre (HOVER) */
-.btn:hover, .btn-enviar:hover {
+.btn:hover, .btn-enviar:hover, .btn-secundari:hover {
     background-color: var(--color-secondary);
     border-color: var(--color-secondary);
     transform: translateY(-2px); 
@@ -220,6 +299,7 @@ nav ul a.nav:hover {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+/* Estil del Formulari de Contacte (contact.html) */
 .contact-form {
     background-color: var(--color-light);
     padding: 30px;
