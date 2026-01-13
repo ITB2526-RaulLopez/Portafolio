@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio - Project 2</title>
+        <title>Portfolio - High-Availability Server Setup</title>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/project2.css">
         <link rel="icon" href="/img/icono.jpg">
@@ -18,8 +18,8 @@
                    <li class="dropdown">
                         <a href="projects.html" class="dropbtn">Projects</a>
                         <ul class="dropdown-content">
-                            <li><a href="project1.html">Project 1</a></li>
-                            <li><a href="project2.html">Project 2</a></li>
+                            <li><a href="project1.html">Network Security Scanner</a></li>
+                            <li><a href="project2.html">High-Availability Server Setup</a></li>
                         </ul>
                    <li><a href="contact.html">Contact</a></li>
                </ul>
@@ -28,57 +28,52 @@
        <main>
            <section id="projecte-github">
                <header class="center-header">
-                   <h2 id="typing-text">Configuració del Projecte GitHub</h2>
-                   <p>Resum dels passos per a la creació del repositori i vinculació amb PyCharm.</p>
+                   <h2 id="typing-text">High-Availability Server Setup</h2>
+                   <p>Deployment of a redundant Linux infrastructure with automated backups and load balancing.</p>
                </header>
 
                <article class="projecte-llista">
-                   <h3>1. Creació del Compte i Repositori</h3>
-                   <p>Crea un compte a GitHub i un nou repositori amb la nomenclatura: <code>ITB2526-TA02-NomCognom</code>.</p>
+                   <h3>1. Infrastructure Design & VPC</h3>
+                   <p>Designing the network architecture using a Virtual Private Cloud (VPC) to isolate database and web server tiers.</p>
                    <section class="img-container">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_1A.png" alt="Pas 1: Registre GitHub" class="img-tutorial">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_1B.png" alt="Pas 1: Configuració Repo" class="img-tutorial">
+                       <img src="/img/project2-1.png" alt="Pas 1: Registre GitHub" class="img-tutorial">
                    </section>
                </article>
 
                <article class="projecte-llista">
-                   <h3>2. Autenticació de Dos Factors (2FA)</h3>
-                   <p>És <strong>obligatori</strong> activar l'autenticació en dos passos a la configuració de seguretat de GitHub.</p>
+                   <h3>2. Load Balancer Configuration</h3>
+                   <p>Setting up Nginx as a Reverse Proxy to distribute traffic between multiple nodes, ensuring 99.9% uptime.</p>
                    <section class="img-container">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_2A.png" alt="Pas 2: Activació 2FA" class="img-tutorial">
+                       <img src="/img/project2-2.png" alt="Pas 2: Activació 2FA" class="img-tutorial">
                    </section>
                </article>
 
                <article class="projecte-llista">
-                   <h3>3. Clonar a PyCharm</h3>
-                   <p>Des de PyCharm, selecciona "Get from VCS" i introdueix la URL del teu repositori per crear la còpia local.</p>
+                   <h3>3. Database Replication</h3>
+                   <p>Implementing a Master-Slave replication system to prevent data loss in case of a server failure.</p>
                    <section class="img-container">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_3A.png" alt="Pas 3: Get from VCS" class="img-tutorial">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_3B.png" alt="Pas 3: Enganxar URL" class="img-tutorial">
+                       <img src="/img/project2-3.png" alt="Pas 3: Get from VCS" class="img-tutorial">
                    </section>
                </article>
 
                <article class="projecte-llista">
-                   <h3>4. Fitxer README.md</h3>
-                   <p>Assegura't que el projecte conté un fitxer <code>README.md</code> explicatiu.</p>
+                   <h3>4. Automated Backup Scripts</h3>
+                   <p>Development of Bash scripts that perform daily encrypted backups to an off-site S3 storage bucket.</p>
                    <section class="img-container">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_4A.png" alt="Pas 4: Contingut README" class="img-tutorial">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_4B.png" alt="Pas 4: Visualització README" class="img-tutorial">
+                       <img src="/img/project2-4.png" alt="Pas 4: Contingut README" class="img-tutorial">
                    </section>
                </article>
 
                <article class="projecte-llista">
-                   <h3>5. Afegir Recursos i fer Commit</h3>
-                   <p>Afegeix fitxers externs, fes el <strong>Commit</strong> i després el <strong>Push</strong>.</p>
+                   <h3>5. Monitoring & Alerts</h3>
+                   <p>Integration with Prometheus and Grafana to monitor CPU load and receive real-time alerts via Telegram.</p>
                    <section class="img-container">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_5A.png" alt="Pas 5: Arrossegar fitxers" class="img-tutorial">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_5B.png" alt="Pas 5: Fer Commit" class="img-tutorial">
-                       <img src="img/NOM_DE_LA_TEVA_IMATGE_5C.png" alt="Pas 5: Fer Push" class="img-tutorial">
+                       <img src="/img/project2-5.png" alt="Pas 5: Arrossegar fitxers" class="img-tutorial">
                    </section>
                </article>
                
                <section class="center-content margin-top-large">
-                   <a href="projects.html" class="btn">Tornar a Projectes</a>
+                   <a href="projects.html" class="btn">Back to Projects</a>
                </section>
            </section>
        </main>
