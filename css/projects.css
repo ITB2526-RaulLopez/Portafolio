@@ -1,6 +1,5 @@
-/* ==================================== */
-/* 1. BASES I FONS                      */
-/* ==================================== */
+/*1. BASES I FONS*/
+
 * {
     margin: 0;
     padding: 0;
@@ -28,9 +27,8 @@ body::before {
     z-index: -1; 
 }
 
-/* ==================================== */
-/* 2. HEADER (Amb Menú Desplegable)     */
-/* ==================================== */
+/*2. HEADER (Amb Menú Desplegable)*/
+
 header {
     background-color: #ffffff;
     padding: 20px;
@@ -86,6 +84,7 @@ nav ul a:hover {
 }
 
 /* Lògica del Dropdown */
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -128,9 +127,8 @@ nav ul a:hover {
     display: flex;
 }
 
-/* ==================================== */
-/* 3. LLISTAT DE PROJECTES              */
-/* ==================================== */
+/*3. LLISTAT DE PROJECTES*/
+
 main {
     padding: 60px 20px;
     flex-grow: 1;
@@ -164,10 +162,11 @@ main {
 }
 
 /* Efecte en passar el ratolí */
+
 .projecte-llista:hover {
     transform: scale(1.02); /* Creix una mica */
     border-left-color: #0d47a1;
-    background-color: #fcfcfc;
+    background-color: #ffffff;
 }
 
 .projecte-llista h3 {
@@ -182,6 +181,7 @@ main {
 }
 
 /* Botó de la llista */
+
 .btn-llista {
     display: inline-block;
     text-decoration: none;
@@ -198,9 +198,8 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ==================================== */
-/* 4. FOOTER (Comú)                     */
-/* ==================================== */
+/* 4. FOOTER */
+
 footer {
     background-color: #0d47a1;
     color: #ffffff;
@@ -222,26 +221,6 @@ footer .xarxes a {
 
 footer .xarxes a:hover {
     text-decoration: underline;
-}
-
- /*FUNCIONALITAT JAVASCRIPT: Ampliació d'Imatges*/
- 
-.modal-zoom {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    cursor: zoom-out;
-}
-.modal-zoom img {
-    max-width: 90%;
-    max-height: 90%;
-    border: 3px solid white;
-    border-radius: 5px;
 }
 
 /*FUNCIONALITAT JAVASCRIPT: Efecte Typewriter*/
